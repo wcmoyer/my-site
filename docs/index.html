@@ -83,11 +83,16 @@
   /* match other sections' vertical spacing so margins are consistent */
   .hero {
     padding: 48px 0;
+  }
+
+  /* New: keep the wrap for consistent horizontal padding, and apply flex inside it */
+  .hero-content {
     display: flex;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
   }
+
   .hero-text { flex: 1; min-width: 260px; }
   .hero h1 {
     font-size: clamp(2.2rem, 6vw, 3.4rem);
@@ -224,7 +229,7 @@
 
   @media (max-width: 600px) {
     .nav-links { gap: 14px; }
-    .hero { flex-direction: column-reverse; text-align: center; }
+    .hero-content { flex-direction: column-reverse; text-align: center; }
     .hero p { max-width: 100%; }
   }
 </style>
@@ -242,16 +247,18 @@
   </div>
 </nav>
 
-<header class="hero wrap">
-  <div class="hero-text">
-    <span class="eyebrow">Bello — welcome to my corner of the internet</span>
-    <h1>I'm <span>Wally!</span></h1>
-    <p>I love soccer and surfing, and I have a dog named Ozzie. I also enjoy coding and making things — this site is my first coding project. Thanks to my dad for showing me how to get started!</p>
+<header class="hero">
+  <div class="wrap hero-content">
+    <div class="hero-text">
+      <span class="eyebrow">Bello — welcome to my corner of the internet</span>
+      <h1>I'm <span>Wally!</span></h1>
+      <p>I love soccer and surfing, and I have a dog named Ozzie. I also enjoy coding and making things — this site is my first coding project. Thanks to my dad for showing me how to get started!</p>
+    </div>
+    
+    <!-- Make sure the file "IMG_0399.jpeg" is in the same folder as this HTML file,
+         or adjust the path (e.g., images/IMG_0399.jpeg) to where your image is stored. -->
+    <img src="IMG_0399.jpeg" alt="Wally and Ozzie portrait" class="placeholder-img" loading="lazy">
   </div>
-  
-  <!-- Make sure the file "IMG_0399.jpeg" is in the same folder as this HTML file,
-       or adjust the path (e.g., images/IMG_0399.jpeg) to where your image is stored. -->
-  <img src="IMG_0399.jpeg" alt="Wally and Ozzie portrait" class="placeholder-img" loading="lazy">
 </header>
 
 <section id="about" class="wrap about">
