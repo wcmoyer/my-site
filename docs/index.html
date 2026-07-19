@@ -164,6 +164,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 16px;
+    /* ensure rows behave consistently */
+    align-items: stretch;
   }
   .gallery-item {
     aspect-ratio: 1;
@@ -236,18 +238,18 @@
   <div class="hero-text">
     <span class="eyebrow">Bello, and welcome to my corner of the internet</span>
     <h1>I'm <span>Wally!</span></h1>
-    <p>I'm into Soccer, (or football for some of you) dogs, (I have my own dog named Ozzie as shown in some of my pictures,) surfing, and so much more.</p>
+    <p>I'm into soccer (or football for some of you), dogs (I have my dog Ozzie, as shown in some of my pictures), surfing, and so much more.</p>
   </div>
   
-  <!-- Make sure the file "D73ADC39-C329-4D77-AFE7-AF6B5AE14DD6.jpeg" is in the same folder as this HTML file,
-       or adjust the path (e.g., images/D73ADC39-C329-4D77-AFE7-AF6B5AE14DD6.jpeg) to where your image is stored. -->
-  <img   <img src="IMG_0399.jpeg" alt="Wally and Ozzie portrait" class="placeholder-img" loading="lazy"
+  <!-- Make sure the file "IMG_0399.jpeg" is in the same folder as this HTML file,
+       or adjust the path (e.g., images/IMG_0399.jpeg) to where your image is stored. -->
+  <img src="IMG_0399.jpeg" alt="Wally and Ozzie portrait" class="placeholder-img" loading="lazy">
 </header>
 
 <section id="about" class="wrap about">
   <span class="eyebrow">About</span>
   <h2>I'm so cool!!!</h2>
-  <p>I'm 10 years old, going into 5th Grade. I go to Rieke Elementary in Portland, Oregon. We moved into a new house 2 years ago on the 4th of July. This is my first time trying to code. My dad is a data analyst who works for Kamehameha Schools, and he was the one who tought me how to code. Big shout out to him. None of this would be possible without his help.</p>
+  <p>I'm 10 years old, going into 5th Grade. I go to Rieke Elementary in Portland, Oregon. We moved into a new house 2 years ago on the 4th of July. This is my first time trying to code. My dad is a data analyst who works for Kamehameha Schools, and he was the one who taught me how to code. Big shout out to him. None of this would be possible without his help.</p>
 </section>
 
 <section id="faves" class="wrap">
@@ -287,7 +289,8 @@
       <img src="D73ADC39-C329-4D77-AFE7-AF6B5AE14DD6.jpeg" alt="Wally and Ozzie" class="gallery-photo" loading="lazy">
     </div>
     <div class="gallery-item">
-      <img src="IMG_0321.jpeg" alt="Wally and Ozzie" class="gallery-photo" loading="lazy"></div>
+      <img src="IMG_0321.jpeg" alt="Wally and Ozzie" class="gallery-photo" loading="lazy">
+    </div>
   </div>
 </section>
 
